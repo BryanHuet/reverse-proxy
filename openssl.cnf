@@ -1,0 +1,25 @@
+[req]
+default_bits = 4096
+default_md = sha256
+distinguished_name = dn
+req_extensions = req_ext
+x509_extensions = v3_ca
+prompt = no
+
+[dn]
+C = FR
+ST = Normandy
+L = Caen
+O = My Corp
+OU = My Corp
+CN = *.localhost
+
+[req_ext]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = *.localhost
+DNS.2 = localhost
+
+[v3_ca]
+subjectAltName = @alt_names
