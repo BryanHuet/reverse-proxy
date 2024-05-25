@@ -1,6 +1,6 @@
 ﻿http:
   middlewares:
-    test-redirectscheme:
+    http-to-https:
       redirectScheme:
         scheme: https
         permanent: true
