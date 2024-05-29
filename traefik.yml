@@ -20,8 +20,10 @@ entryPoints:
 
 providers:
   docker: 
+    defaultRule: "{{.name}}.localhost"
     endpoint: "unix:///var/run/docker.sock"
     exposedByDefault: false
+    network: myproxy
   file:
     directory: "/etc/traefik/config"
     watch: true
